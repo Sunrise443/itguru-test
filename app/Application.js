@@ -8,6 +8,14 @@ Ext.define('First.Application', {
 
     name: 'First',
 
+    stores: [
+        'Items'
+    ],
+
+    launch: function () {
+        // TODO - Launch the application
+    },
+
     quickTips: false,
     platformConfig: {
         desktop: {

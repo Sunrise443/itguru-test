@@ -6,19 +6,21 @@ Ext.define('First.view.main.List', {
     xtype: 'mainlist',
 
     requires: [
-        'First.store.Personnel'
+        'First.store.Items'
     ],
 
-    title: 'Personnel',
+    title: 'Товары',
 
     store: {
-        type: 'personnel'
+        type: 'items'
     },
 
     columns: [
-        { text: 'Name',  dataIndex: 'name' },
-        { text: 'Email', dataIndex: 'email', flex: 1 },
-        { text: 'Phone', dataIndex: 'phone', flex: 1 }
+        { text: 'ID',  dataIndex: 'ID' },
+        { text: 'Имя', dataIndex: 'Name', flex: 1 },
+        { text: 'Описание', dataIndex: 'Description', flex: 1 },
+        { text: 'Цена', dataIndex: 'Price', flex: 1 },
+        { text: 'Кол-во', dataIndex: 'Amount', flex: 1 }
     ],
 
     listeners: {
