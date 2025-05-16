@@ -15,5 +15,22 @@ Ext.define('First.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
+    },
+
+    //creates a new tab
+    onItems: function() {
+        var tabPanel = this.getView();
+            tab = tabPanel.add({
+                title: 'Товары',
+                items: [{
+                    xtype: 'mainlist'
+                }]
+            })
+        tabPanel.setActiveTab(tab);
+    },
+
+    onLogout: function() {
+        Ext.Msg.confirm('Confirm', 'Are you okay', 'onConfirm', this)
+        //change to logout
     }
 });

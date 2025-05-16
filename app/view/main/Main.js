@@ -37,7 +37,26 @@ Ext.define('First.view.main.Main', {
             },
             flex: 0
         },
-        iconCls: 'fa-th-list'
+        items: [
+            {
+                title: 'Items',
+                text: 'Товары',
+                xtype: 'button',
+                listeners: {
+                    element: 'el',
+                    click: 'onItems'
+                }
+            },
+            {
+                title: 'Logout',
+                text: 'Выйти',
+                xtype: 'button',
+                listeners: {
+                    element: 'el2',
+                    click: 'onLogout'
+                }
+            }
+        ]
     },
 
     tabBar: {
@@ -76,28 +95,9 @@ Ext.define('First.view.main.Main', {
 
     items: [{
         title: 'Товары',
-        iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
             xtype: 'mainlist'
         }]
-    }, {
-        title: 'Users',
-        iconCls: 'fa-user',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Groups',
-        iconCls: 'fa-users',
-        bind: {
-            html: '{loremIpsum}'
-        }
-    }, {
-        title: 'Settings',
-        iconCls: 'fa-cog',
-        bind: {
-            html: '{loremIpsum}'
-        }
     }]
 });
