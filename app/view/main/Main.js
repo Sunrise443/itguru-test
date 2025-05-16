@@ -52,7 +52,7 @@ Ext.define('First.view.main.Main', {
                 text: 'Выйти',
                 xtype: 'button',
                 listeners: {
-                    element: 'el2',
+                    element: 'el',
                     click: 'onLogout'
                 }
             }

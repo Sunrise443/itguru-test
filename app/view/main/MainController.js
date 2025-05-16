@@ -30,7 +30,13 @@ Ext.define('First.view.main.MainController', {
     },
 
     onLogout: function() {
-        Ext.Msg.confirm('Confirm', 'Are you okay', 'onConfirm', this)
-        //change to logout
+        localStorage.removeItem('FirstLoggedIn')
+
+        this.getView().destroy();
+
+        Ext.create({
+            xtype: 'login',
+            renderTo: Ext.getBody()
+        })
     }
 });

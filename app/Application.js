@@ -12,8 +12,17 @@ Ext.define('First.Application', {
         'Items'
     ],
 
+    requires: [
+        'First.view.main.login.Login',
+        'First.view.main.Main'
+    ],
+
     launch: function () {
-        // TODO - Launch the application
+        var loggedIn = localStorage.getItem("FirstLoggedIn");
+        Ext.create({
+            xtype: loggedIn ? 'app-main' : 'login',
+            renderTo: Ext.getBody()
+        });
     },
 
     quickTips: false,
@@ -31,5 +40,6 @@ Ext.define('First.Application', {
                 }
             }
         );
+        localStorage.removeItem('FirstLoggedIn')
     }
 });
