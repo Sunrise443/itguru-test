@@ -24,12 +24,19 @@ Ext.define('First.view.main.products.Products', {
             allowBlank: true,
             fieldLabel: 'ID',
             emptyText: 'Введите фильтр',
+            maskRe: /[0-9.-]/,
+            listeners: {
+                specialkey: 'onIDFilter'
+            }
         },
         {
             xtype: 'textfield',
             allowBlank: true,
             fieldLabel: 'Описание',
             emptyText: 'Введите фильтр',
+            listeners: {
+                specialkey: 'onDescFilter'
+            }
         },
         {
             xtype: 'mainlist',
