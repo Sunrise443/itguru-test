@@ -7,9 +7,9 @@ Ext.define('First.view.main.MainController', {
 
     alias: 'controller.main',
 
-    onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
-    },
+    requires: [
+        'First.view.main.products.Products'
+    ],
 
     onConfirm: function (choice) {
         if (choice === 'yes') {
@@ -23,7 +23,7 @@ Ext.define('First.view.main.MainController', {
             tab = tabPanel.add({
                 title: 'Товары',
                 items: [{
-                    xtype: 'mainlist'
+                    xtype: 'products'
                 }]
             })
         tabPanel.setActiveTab(tab);

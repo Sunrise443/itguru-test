@@ -8,7 +8,7 @@ Ext.define('First.view.main.Main', {
 
         'First.view.main.MainController',
         'First.view.main.MainModel',
-        'First.view.main.List'
+        'First.view.main.list.List'
     ],
 
     controller: 'main',

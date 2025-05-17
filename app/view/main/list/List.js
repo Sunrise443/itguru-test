@@ -1,15 +1,14 @@
 /**
  * This view is an example list of people.
  */
-Ext.define('First.view.main.List', {
+Ext.define('First.view.main.list.List', {
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
+    controller: 'list',
 
     requires: [
         'First.store.Items'
     ],
-
-    title: 'Товары',
 
     store: {
         type: 'items'
