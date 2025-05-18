@@ -1,12 +1,11 @@
-Ext.define('First.view.main.card.Card', {
+Ext.define('First.view.main.list.Card', {
     extend: 'Ext.window.Window',
     xtype: 'card',
     id: 'card',
-    controller: 'card-cont',
     autoShow: true,
+    controller: 'list-cont',
     
     requires: [
-        'First.view.main.card.CardController',
 
         'Ext.form.Panel',
     ],
@@ -17,7 +16,7 @@ Ext.define('First.view.main.card.Card', {
 
     header: {
         bind: {
-            title: 'Карточка товара: ' + 'НАЗВАНИЕ ПОМЕНЯТЬ',
+            title: 'Карточка товара: ' + '{name}',
         }
     },
 
@@ -30,8 +29,7 @@ Ext.define('First.view.main.card.Card', {
                 fieldLabel: 'ID',
                 name: 'id',
                 readOnly: true,
-                value: '3',
-                border: false,
+                bind: '{id}',
                 inputWrapCls: "",
                 triggerWrapCls: "",
                 fieldStyle: "background:none",
@@ -41,7 +39,7 @@ Ext.define('First.view.main.card.Card', {
                 fieldLabel: 'Наименование',
                 name: 'description',
                 readOnly: true,
-                value: 'HElloooooooo',
+                bind: '{desc}',
                 border: false,
                 inputWrapCls: "",
                 triggerWrapCls: "",
@@ -51,13 +49,13 @@ Ext.define('First.view.main.card.Card', {
                 fieldLabel: 'Цена',
                 name: 'price',
                 xtype: 'numberfield',
-                value: 132
+                bind: '{price}'
             },
             {
                 fieldLabel: 'Кол-во',
                 name: 'amount',
                 xtype: 'numberfield',
-                value: 1
+                bind: '{amount}'
             },
         ],
         buttons: [

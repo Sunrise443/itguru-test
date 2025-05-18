@@ -4,7 +4,8 @@
 Ext.define('First.view.main.list.List', {
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
-    controller: 'list',
+    controller: 'list-cont',
+    session: true,
 
     requires: [
         'First.store.Items'
