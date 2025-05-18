@@ -18,7 +18,8 @@ Ext.define('First.Application', {
     ],
 
     launch: function () {
-        var loggedIn = localStorage.getItem("FirstLoggedIn");
+        localStorage.removeItem('FirstLoggedIn')
+        var loggedIn = localStorage.getItem("FirstLoggedIn") === 'true';
         Ext.create({
             xtype: loggedIn ? 'app-main' : 'login',
             renderTo: Ext.getBody()

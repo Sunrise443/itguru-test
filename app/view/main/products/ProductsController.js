@@ -22,13 +22,9 @@ Ext.define('First.view.main.products.ProductsController', {
         var store = grid.getStore()
         if (event.getKey() === Ext.EventObject.ENTER && field.getValue() != '') {
             store.addFilter({
+                property: 'Description',
                 id: 'descFilter',
-                // фильтр по наименованию и описанию (для фильтра только по описанию удалить descMatch)
-                filterFn: function(record) {
-                    var descMatch = record.get('Description') == field.getValue()
-                    var nameMatch = record.get('Name').includes(field.getValue())
-                    return descMatch || nameMatch
-                },
+                value: field.getValue(),
                 caseSensitive: false
             })
         } else if (event.getKey() === Ext.EventObject.ENTER) {

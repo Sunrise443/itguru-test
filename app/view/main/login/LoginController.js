@@ -23,7 +23,7 @@ Ext.define('First.view.main.login.LoginController', {
 
         passField.setValue('')
         loginField.setValue('')
-        localStorage.setItem("FirstLoggedIn", true);
+        localStorage.setItem("FirstLoggedIn", 'true');
 
         this.getView().destroy();
 
