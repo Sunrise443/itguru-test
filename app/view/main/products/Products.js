@@ -40,6 +40,7 @@ Ext.define('First.view.main.products.Products', {
         },
         {
             xtype: 'mainlist',
+            reference: 'productsGrid',
             border: true,
             style: {
                 marginTop: '20px'

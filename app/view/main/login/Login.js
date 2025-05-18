@@ -11,7 +11,7 @@ Ext.define('First.view.main.login.Login', {
         'First.view.main.login.LoginController'
     ],
 
-    controller: 'login',
+    controller: 'login-cont',
     title: 'Окно Входа',
     bodyPadding: 10,
     closable: false,
@@ -37,7 +37,7 @@ Ext.define('First.view.main.login.Login', {
 
         buttons: [
             {
-                text: 'Login',
+                text: 'Войти',
                 formBind: true,
                 handler: 'onLogin'
             }

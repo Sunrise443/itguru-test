@@ -5,7 +5,7 @@
 Ext.define('First.view.main.login.LoginController', {
     extend: 'Ext.app.ViewController',
 
-    alias: 'controller.login',
+    alias: 'controller.login-cont',
 
     onLogin: function () {
         var form = this.getView().down('form');

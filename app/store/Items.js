@@ -4,6 +4,7 @@ Ext.define('First.store.Items', {
     alias: 'store.items',
 
     model: 'First.model.Item',
+    storeId: 'list',
 
     data: { items: [
         { ID: 1, Name: "Notebook Lenovo", Description: "ThinPad", Price: 100, Amount: 20 },

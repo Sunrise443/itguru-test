@@ -8,7 +8,8 @@ Ext.define('First.view.main.MainController', {
     alias: 'controller.main',
 
     requires: [
-        'First.view.main.products.Products'
+        'First.view.main.products.Products',
+        'First.view.main.login.Login'
     ],
 
     onConfirm: function (choice) {

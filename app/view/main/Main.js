@@ -1,6 +1,7 @@
 Ext.define('First.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
+    autoShow: true,
 
     requires: [
         'Ext.plugin.Viewport',
