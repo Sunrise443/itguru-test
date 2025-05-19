@@ -1,7 +1,3 @@
-/**
- * This class is the controller for the main view for the application. It is specified as
- * the "controller" of the Main view class.
- */
 Ext.define('First.view.main.login.LoginController', {
     extend: 'Ext.app.ViewController',
 
@@ -23,12 +19,12 @@ Ext.define('First.view.main.login.LoginController', {
 
         passField.setValue('')
         loginField.setValue('')
-        localStorage.setItem("FirstLoggedIn", 'true');
+        localStorage.setItem('FirstLoggedIn', 'true');
 
         this.getView().destroy();
 
         Ext.create({
-            xtype: "app-main",
+            xtype: 'app-main',
             renderTo: Ext.getBody()
         })
     },

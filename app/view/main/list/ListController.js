@@ -50,7 +50,7 @@ Ext.define('First.view.main.list.ListController', {
         var store = Ext.data.StoreManager.lookup('list');
         var record = store.getAt(id);
         if (price < 0 || amount < 0) {
-            Ext.Msg.alert("Ошибка!", "Неверные данные")
+            Ext.Msg.alert('Ошибка!', 'Неверные данные')
         } else if (price != record.get('Price') || amount != record.get('Amount')) {
             Ext.Msg.alert('Данные были изменены')
             record.set('Price', price)

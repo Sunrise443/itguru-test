@@ -1,8 +1,3 @@
-/**
- * The main application class. An instance of this class is created by app.js when it
- * calls Ext.application(). This is the ideal place to handle application launch and
- * initialization details.
- */
 Ext.define('First.Application', {
     extend: 'Ext.app.Application',
 
@@ -19,7 +14,7 @@ Ext.define('First.Application', {
 
     launch: function () {
         localStorage.removeItem('FirstLoggedIn')
-        var loggedIn = localStorage.getItem("FirstLoggedIn") === 'true';
+        var loggedIn = localStorage.getItem('FirstLoggedIn') === 'true';
         Ext.create({
             xtype: loggedIn ? 'app-main' : 'login',
             renderTo: Ext.getBody()
